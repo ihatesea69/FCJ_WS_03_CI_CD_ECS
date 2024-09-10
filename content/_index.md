@@ -1,44 +1,60 @@
-+++
-title = "Setting up an AWS account"
-date = 2021
-weight = 1
-chapter = false
-+++
+# Predicting Air Quality Using SageMaker, AutoGluon, and ASDI Open Data
 
-# Creating your first AWS account
+## Overview
+According to the World Health Organization (WHO), ambient (outdoor) air pollution leads to an estimated **4.2 million deaths per year**, with **99% of the world’s population** living in areas where air quality exceeds WHO limits. This workshop demonstrates how to use **Amazon SageMaker**, **AutoGluon**, and open datasets from the **Amazon Sustainability Data Initiative (ASDI)** to predict air quality based on weather conditions.
 
-#### Overview
-In this first lab, you will be creating your new **AWS** account and use Multi-factor Authentication (**MFA**) to improve your account security. Next, you will create an **Administrator Group** and **Admin User** to manage access to resources in your account instead of using the root user. \
-Finally, we will step through account authentication with **AWS Support** in the event you experience authentication problems.
+## Objectives
+In this workshop, you will:
+- Investigate the relationship between **air quality** and **weather** using **Amazon SageMaker Studio**.
+- Access open data from **ASDI** via **Amazon S3** and **HTTP APIs** to explore air quality by location.
+- Deploy a machine learning model using **AutoGluon** (open-source AutoML supported by AWS) to predict how weather features result in **healthy** vs. **unhealthy** air quality.
+- Experiment with different scenarios (new locations, air quality parameters) and improve the model with your own code.
+- Analyze how **location**, **wind speed**, and **seasonality** correlate with air quality, using historical data to predict air quality under specific conditions.
 
-#### AWS Account
-**An AWS account** is the basic container for all the AWS resources you can create as an AWS customer. By default, each AWS account will have a _root user_. The _root user_ has full access within your AWS account, and root user permissions cannot be limited. When you first create your AWS account, you will be assessing it as the _root user_.
+This workshop provides **step-by-step instructions** and code examples for each task. It is suitable for participants with no prior knowledge of machine learning or air quality prediction.
 
-{{% notice note%}}
-As a best practice, do not use the AWS account _root user_ for any task where it's not required. Instead, create a new IAM user for each person that requires administrator access. Thereafter, the users in the administrators user group should set up the user groups, users, and so on, for the AWS account. All future interaction should be through the AWS account's users and their own keys instead of the root user. However, to perform some account and service management tasks, you must log in using the root user credentials.
-{{% /notice%}}
+## Importance
+As highlighted, nearly all of the global population (99%) lives in areas where air quality exceeds WHO limits. Poor air quality is associated with an increased risk of:
+- **Stroke**
+- **Heart disease**
+- **Lung cancer**
+- **Asthma**
+- **Other respiratory diseases**
 
-#### Multi-Factor Authentication (MFA)
-**MFA** adds extra security because it requires users to provide unique authentication from an AWS supported MFA mechanism in addition to their regular sign-in credentials when they access AWS websites or services.
+Beyond individual health, poor air quality affects communities and economies. Addressing this issue with **data-driven solutions** is essential for improving public health outcomes.
 
-#### IAM User Group 
-An **IAM user group** is a collection of IAM users. User groups let you specify permissions for multiple users, which can make it easier to manage the permissions for those users. Any user in that user group automatically has the permissions that are assigned to the user group. 
+## Available AWS Resources
+AWS offers a range of tools and datasets to help tackle environmental challenges:
+- **Amazon Sustainability Data Initiative (ASDI)**: A collection of sustainability-focused datasets available on AWS, hosting over 100 petabytes of open data.
+- **AWS Data Exchange**: A marketplace to access both open and licensable data.
+- **Amazon SageMaker**: Provides tools to build, train, and deploy machine learning models at scale.
 
-#### IAM User
-An **IAM user** is an entity that you create in AWS to represent the person or application that uses it to interact with AWS. A user in AWS consists of a name and credentials. \
-Please note that an IAM user with administrator permissions is not the same thing as the AWS account root user.
+## The Role of Citizen Developers
+**Citizen developers**—individuals who use programming or low-code/no-code tools—are key to solving real-world problems. With advancements in technology, citizen developers can easily apply tools like **AutoML** to explore datasets and build meaningful solutions. This workshop is a great example of how citizen developers can contribute to global initiatives like **"tech for good"** by participating in hackathons or side projects.
 
+## Workshop Agenda
+Participants will:
+1. Explore the relationship between weather and air quality.
+2. Utilize open datasets across all **ASDI** categories, including:
+   - Weather
+   - Climate
+   - Water
+   - Agriculture
+   - Satellite imagery
+   - Air quality
+   - Energy
+   - Disaster response
+   - Ecosystems
+3. Build, deploy, and improve a machine learning model using SageMaker and AutoGluon.
 
-#### AWS Support
-AWS Basic Support offers all AWS customers access to our Resource Center, Service Health Dashboard, Product FAQs, Discussion Forums, and Support for Health Checks – at no additional charge. Customers who desire a deeper level of support can subscribe to AWS Support at the Developer, Business, or Enterprise level.
+## Time Required
+This workshop will take approximately **2 hours** to complete.
 
-Customers who choose AWS Support gain one-on-one, fast-response support from AWS engineers. The service helps customers use AWS's products and features. With pay-by-the-month pricing and unlimited support cases, customers are freed from long-term commitments. Customers with operational issues or technical questions can contact a team of support engineers and receive predictable response times and personalized support.
+## Learn Today, Build Tomorrow!
+Take what you learn in this workshop and apply it to new problems. Explore the vast array of open datasets available through ASDI and AWS to build solutions in various domains, from climate science to public health.
 
-
-#### Main Content
-
-1. [Creating a new AWS Account](1-create-new-aws-account/)
-2. [Setting up MFA for the AWS Account root user](2-MFA-Setup-For-AWS-User-(root))
-3. [Creating an Administrator Accounts and Groups](3-create-admin-user-and-group/)
-4. [Getting support for Account Authentication](4-verify-new-account/)
-<!-- need to remove parenthesis for path in Hugo 0.88.1 for Windows-->
+## References
+- [World Health Organization (WHO): Ambient (Outdoor) Air Pollution Fact Sheet](https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health)
+- [Amazon Sustainability Data Initiative (ASDI)](https://aws.amazon.com/sustainability/data-initiative/)
+- [Open Data on AWS](https://registry.opendata.aws/)
+- [AWS Data Exchange](https://aws.amazon.com/data-exchange/)

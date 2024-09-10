@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Setting up an AWS account :: AWS Account Setup</title>
+    <title> :: AWS Account Setup</title>
 
     
-    <link href="/css/nucleus.css?1725975159" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725975159" rel="stylesheet">
-    <link href="/css/hybrid.css?1725975159" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725975159" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725975159" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725975159" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725975159" rel="stylesheet">
-    <link href="/css/theme.css?1725975159" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725975159" rel="stylesheet">
+    <link href="/css/nucleus.css?1725976080" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725976080" rel="stylesheet">
+    <link href="/css/hybrid.css?1725976080" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725976080" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725976080" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725976080" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725976080" rel="stylesheet">
+    <link href="/css/theme.css?1725976080" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725976080" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725975159" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725976080" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725975159"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725976080"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725975159"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725975159"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725976080"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725976080"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725975159"></script>
+<script type="text/javascript" src="/js/search.js?1725976080"></script>
 
     
   </div>
@@ -400,34 +400,68 @@
 </span>
 
  
-<h1 id="creating-your-first-aws-account">Creating your first AWS account</h1>
-<h4 id="overview">Overview</h4>
-<p>In this first lab, you will be creating your new <strong>AWS</strong> account and use Multi-factor Authentication (<strong>MFA</strong>) to improve your account security. Next, you will create an <strong>Administrator Group</strong> and <strong>Admin User</strong> to manage access to resources in your account instead of using the root user. <br>
-Finally, we will step through account authentication with <strong>AWS Support</strong> in the event you experience authentication problems.</p>
-<h4 id="aws-account">AWS Account</h4>
-<p><strong>An AWS account</strong> is the basic container for all the AWS resources you can create as an AWS customer. By default, each AWS account will have a <em>root user</em>. The <em>root user</em> has full access within your AWS account, and root user permissions cannot be limited. When you first create your AWS account, you will be assessing it as the <em>root user</em>.</p>
-
-<div class="notices note" ><p>As a best practice, do not use the AWS account <em>root user</em> for any task where it&rsquo;s not required. Instead, create a new IAM user for each person that requires administrator access. Thereafter, the users in the administrators user group should set up the user groups, users, and so on, for the AWS account. All future interaction should be through the AWS account&rsquo;s users and their own keys instead of the root user. However, to perform some account and service management tasks, you must log in using the root user credentials.</p>
-</div>
-
-<h4 id="multi-factor-authentication-mfa">Multi-Factor Authentication (MFA)</h4>
-<p><strong>MFA</strong> adds extra security because it requires users to provide unique authentication from an AWS supported MFA mechanism in addition to their regular sign-in credentials when they access AWS websites or services.</p>
-<h4 id="iam-user-group">IAM User Group</h4>
-<p>An <strong>IAM user group</strong> is a collection of IAM users. User groups let you specify permissions for multiple users, which can make it easier to manage the permissions for those users. Any user in that user group automatically has the permissions that are assigned to the user group.</p>
-<h4 id="iam-user">IAM User</h4>
-<p>An <strong>IAM user</strong> is an entity that you create in AWS to represent the person or application that uses it to interact with AWS. A user in AWS consists of a name and credentials. <br>
-Please note that an IAM user with administrator permissions is not the same thing as the AWS account root user.</p>
-<h4 id="aws-support">AWS Support</h4>
-<p>AWS Basic Support offers all AWS customers access to our Resource Center, Service Health Dashboard, Product FAQs, Discussion Forums, and Support for Health Checks – at no additional charge. Customers who desire a deeper level of support can subscribe to AWS Support at the Developer, Business, or Enterprise level.</p>
-<p>Customers who choose AWS Support gain one-on-one, fast-response support from AWS engineers. The service helps customers use AWS&rsquo;s products and features. With pay-by-the-month pricing and unlimited support cases, customers are freed from long-term commitments. Customers with operational issues or technical questions can contact a team of support engineers and receive predictable response times and personalized support.</p>
-<h4 id="main-content">Main Content</h4>
+<h1 id="predicting-air-quality-using-sagemaker-autogluon-and-asdi-open-data">Predicting Air Quality Using SageMaker, AutoGluon, and ASDI Open Data</h1>
+<h2 id="overview">Overview</h2>
+<p>According to the World Health Organization (WHO), ambient (outdoor) air pollution leads to an estimated <strong>4.2 million deaths per year</strong>, with <strong>99% of the world’s population</strong> living in areas where air quality exceeds WHO limits. This workshop demonstrates how to use <strong>Amazon SageMaker</strong>, <strong>AutoGluon</strong>, and open datasets from the <strong>Amazon Sustainability Data Initiative (ASDI)</strong> to predict air quality based on weather conditions.</p>
+<h2 id="objectives">Objectives</h2>
+<p>In this workshop, you will:</p>
+<ul>
+<li>Investigate the relationship between <strong>air quality</strong> and <strong>weather</strong> using <strong>Amazon SageMaker Studio</strong>.</li>
+<li>Access open data from <strong>ASDI</strong> via <strong>Amazon S3</strong> and <strong>HTTP APIs</strong> to explore air quality by location.</li>
+<li>Deploy a machine learning model using <strong>AutoGluon</strong> (open-source AutoML supported by AWS) to predict how weather features result in <strong>healthy</strong> vs. <strong>unhealthy</strong> air quality.</li>
+<li>Experiment with different scenarios (new locations, air quality parameters) and improve the model with your own code.</li>
+<li>Analyze how <strong>location</strong>, <strong>wind speed</strong>, and <strong>seasonality</strong> correlate with air quality, using historical data to predict air quality under specific conditions.</li>
+</ul>
+<p>This workshop provides <strong>step-by-step instructions</strong> and code examples for each task. It is suitable for participants with no prior knowledge of machine learning or air quality prediction.</p>
+<h2 id="importance">Importance</h2>
+<p>As highlighted, nearly all of the global population (99%) lives in areas where air quality exceeds WHO limits. Poor air quality is associated with an increased risk of:</p>
+<ul>
+<li><strong>Stroke</strong></li>
+<li><strong>Heart disease</strong></li>
+<li><strong>Lung cancer</strong></li>
+<li><strong>Asthma</strong></li>
+<li><strong>Other respiratory diseases</strong></li>
+</ul>
+<p>Beyond individual health, poor air quality affects communities and economies. Addressing this issue with <strong>data-driven solutions</strong> is essential for improving public health outcomes.</p>
+<h2 id="available-aws-resources">Available AWS Resources</h2>
+<p>AWS offers a range of tools and datasets to help tackle environmental challenges:</p>
+<ul>
+<li><strong>Amazon Sustainability Data Initiative (ASDI)</strong>: A collection of sustainability-focused datasets available on AWS, hosting over 100 petabytes of open data.</li>
+<li><strong>AWS Data Exchange</strong>: A marketplace to access both open and licensable data.</li>
+<li><strong>Amazon SageMaker</strong>: Provides tools to build, train, and deploy machine learning models at scale.</li>
+</ul>
+<h2 id="the-role-of-citizen-developers">The Role of Citizen Developers</h2>
+<p><strong>Citizen developers</strong>—individuals who use programming or low-code/no-code tools—are key to solving real-world problems. With advancements in technology, citizen developers can easily apply tools like <strong>AutoML</strong> to explore datasets and build meaningful solutions. This workshop is a great example of how citizen developers can contribute to global initiatives like <strong>&ldquo;tech for good&rdquo;</strong> by participating in hackathons or side projects.</p>
+<h2 id="workshop-agenda">Workshop Agenda</h2>
+<p>Participants will:</p>
 <ol>
-<li><a href="/1-create-new-aws-account/">Creating a new AWS Account</a></li>
-<li><a href="/2-mfa-setup-for-aws-user-root/">Setting up MFA for the AWS Account root user</a></li>
-<li><a href="/3-create-admin-user-and-group/">Creating an Administrator Accounts and Groups</a></li>
-<li><a href="/4-verify-new-account/">Getting support for Account Authentication</a></li>
+<li>Explore the relationship between weather and air quality.</li>
+<li>Utilize open datasets across all <strong>ASDI</strong> categories, including:
+<ul>
+<li>Weather</li>
+<li>Climate</li>
+<li>Water</li>
+<li>Agriculture</li>
+<li>Satellite imagery</li>
+<li>Air quality</li>
+<li>Energy</li>
+<li>Disaster response</li>
+<li>Ecosystems</li>
+</ul>
+</li>
+<li>Build, deploy, and improve a machine learning model using SageMaker and AutoGluon.</li>
 </ol>
-<!-- raw HTML omitted -->
+<h2 id="time-required">Time Required</h2>
+<p>This workshop will take approximately <strong>2 hours</strong> to complete.</p>
+<h2 id="learn-today-build-tomorrow">Learn Today, Build Tomorrow!</h2>
+<p>Take what you learn in this workshop and apply it to new problems. Explore the vast array of open datasets available through ASDI and AWS to build solutions in various domains, from climate science to public health.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health">World Health Organization (WHO): Ambient (Outdoor) Air Pollution Fact Sheet</a></li>
+<li><a href="https://aws.amazon.com/sustainability/data-initiative/">Amazon Sustainability Data Initiative (ASDI)</a></li>
+<li><a href="https://registry.opendata.aws/">Open Data on AWS</a></li>
+<li><a href="https://aws.amazon.com/data-exchange/">AWS Data Exchange</a></li>
+</ul>
 	
   
         
@@ -593,19 +627,19 @@ Please note that an IAM user with administrator permissions is not the same thin
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725975159"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725975159"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725975159"></script>
-    <script src="/js/jquery.sticky.js?1725975159"></script>
-    <script src="/js/featherlight.min.js?1725975159"></script>
-    <script src="/js/highlight.pack.js?1725975159"></script>
+    <script src="/js/clipboard.min.js?1725976080"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725976080"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725976080"></script>
+    <script src="/js/jquery.sticky.js?1725976080"></script>
+    <script src="/js/featherlight.min.js?1725976080"></script>
+    <script src="/js/highlight.pack.js?1725976080"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725975159"></script>
-    <script src="/js/learn.js?1725975159"></script>
-    <script src="/js/hugo-learn.js?1725975159"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725976080"></script>
+    <script src="/js/learn.js?1725976080"></script>
+    <script src="/js/hugo-learn.js?1725976080"></script>
 
-    <link href="/mermaid/mermaid.css?1725975159" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725975159"></script>
+    <link href="/mermaid/mermaid.css?1725976080" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725976080"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
